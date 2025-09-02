@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+    int num = 3;
+    cout << num + num << "\n";                 // 6
+    cout << num * num - num << "\n";           // 6
+    cout << (num * num / num) + num << "\n";   // 6
+    cout << (num + num) + (num - num) << "\n"; // 6
+    cout << (num / num) * (num + num) << "\n"; // 6
+    cout << (num % num) + (num + num) << "\n"; // 6
+
+    cout << 10 + 20 + 15 + 3 -  190 + 10 +  400 << "\n"; // 0
+} 
+
