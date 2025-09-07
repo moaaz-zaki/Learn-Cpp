@@ -1,5 +1,6 @@
 #include <iostream>
 #include <array>
+#include <string.h>
 using namespace std;
 
 int main()
@@ -45,10 +46,9 @@ int main()
     }
 
     string names[][3]{
-        {"Ahmed" , "Sayed" , "Mahmoud"},
-        {"Sameh" , "Mahdy" , "Gamal"},
-        {"Mohamed" , "Adel" , "Majed"}
-    };
+        {"Ahmed", "Sayed", "Mahmoud"},
+        {"Sameh", "Mahdy", "Gamal"},
+        {"Mohamed", "Adel", "Majed"}};
 
     cout << "First Collection Of Names:\n";
     cout << names[0][0] << "\n"; // Ahmed
@@ -71,12 +71,63 @@ int main()
     cout << numbers[1] << "\n"; // 100
     cout << numbers[2] << "\n"; // 100
 
-    array <int , 6> numbs = {10, 20, 30, 40, 20, 50};
-    //Method 1
-    cout << (sizeof(numbs) / sizeof(numbs[0]))<< endl;
+    int numbs[] = {10, 20, 30, 40, 20, 50};
+    // Method 1
+    cout << (sizeof(numbs) / sizeof(numbs[0])) << endl;
 
-    //Method 2
+    // Method 2
     cout << size(numbs) << endl;
+
+    // Method 3
+    cout << end(numbs) - begin(numbs) << endl;
+
+    array<int, 6> nums1 = {10, 20, 30, 40, 20, 50};
+
+    // Method 1
+    cout << "First: " << nums1[0] << endl;
+    cout << "Last: " << nums1[5] << endl;
+
+    // Method 2
+    cout << "First: " << nums1.at(0) << endl;
+    cout << "Last: " << nums1.at(5) << endl;
+
+    // Method 3
+    cout << "First: " << nums1.front() << endl;
+    cout << "Last: " << nums1.back() << endl;
+
+    int index = 2;
+    array<int, 3> oldNums = {10, 20, 30};
+    array<int, 3> newNums;
+
+    // Write Your Code Here
+    for (int i = 0; i < 3; i++)
+    {
+        newNums[index] = oldNums[i];
+        index--;
+    }
+
+    // Do Not Edit The Next 3 Lines
+    cout << newNums[0] << "\n"; // 30
+    cout << newNums[1] << "\n"; // 20
+    cout << newNums[2] << "\n"; // 10
+
+    int nums2[]{1, 2, 3, 5};
+    int vals1[]{10, 20, 40, 30, 10, 60};
+
+    int i1 = nums2[3];
+    int i2 = nums2[0];
+    int i3 = nums2[1];
+    int i4 = nums2[2];
+
+    cout << vals1[i1] + vals1[i2] + vals1[i3] + vals1[i4] << endl;
+
+    string fName = "Elzero ";
+    string mName = "Web ";
+    string lName = "School";
+
+    cout << fName + mName + lName << endl;
+    cout << fName.append(mName.append(lName)) << endl;
+
 
     return 0;
 }
