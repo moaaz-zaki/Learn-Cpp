@@ -126,6 +126,7 @@ int main()
     string lName = "School";
 
     cout << fName + mName + lName << endl;
+    cout << fName  << mName <<  lName << endl;
     cout << fName.append(mName.append(lName)) << endl;
 
 
