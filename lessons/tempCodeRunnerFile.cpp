@@ -1,1 +1,0 @@
-cout << "Result From Vector: ";
